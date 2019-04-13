@@ -1,0 +1,21 @@
+hub:
+ image: selenium/hub:3.7.1-beryllium
+ ports:
+   - 5001:4444
+ environment:
+   - GRID_TIMEOUT=0
+   - GRID_THROW_ON_CAPABILITY_NOT_PRESENT=true
+   - GRID_NEW_SESSION_WAIT_TIMEOUT=-1
+   - GRID_BROWSER_TIMEOUT=15000
+   - GRID_TIMEOUT=30000
+   - GRID_CLEAN_UP_CYCLE=30000
+chrome:
+ image: selenium/node-chrome-debug:3.7.1-beryllium
+ ports:
+   - 5902:5900
+ links:
+   - hub
+ environment:
+   - NODE_MAX_INSTANCES=6
+   - NODE_MAX_SESSION=6
+   - NODE_REGISTER_CYCLE=5000

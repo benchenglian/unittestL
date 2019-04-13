@@ -22,9 +22,9 @@ class Youdao(unittest.TestCase):
         driver.find_element_by_id("transMachine").click()
         time.sleep(2)
 
-    def tearDown(self):
-        self.driver.quit()
-        self.assertEqual([], self.verificationErrors)
+    #def tearDown(self):
+        #self.driver.quit()
+        #self.assertEqual([], self.verificationErrors)
 
 
 if __name__ == "__main__":

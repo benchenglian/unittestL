@@ -41,9 +41,9 @@ class Baidu(unittest.TestCase):
         # 保存设置的信息
         driver.find_element_by_xpath("//input[@value='保存设置']").click()
 
-    def tearDown(self):
-        self.driver.quit()
-        self.assertEqual([], self.verificationErrors)  # 断言错误列表是否为空
+    #def tearDown(self):
+        #self.driver.quit()
+        #self.assertEqual([], self.verificationErrors)  # 断言错误列表是否为空
 
 
 if __name__ == "__main__":

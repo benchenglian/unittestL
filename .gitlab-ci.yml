@@ -1,0 +1,10 @@
+image: continuumio/anaconda:2018.12
+
+before_script:
+  - python --version
+  - pip install requests faker voluptuous selenium nose configparser
+
+test:
+  script:
+    - cd testsuites
+    - python suite.py
