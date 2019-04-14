@@ -8,7 +8,6 @@ before_script:
 test:
   script:
     - pwd
-    - cd uitestL
     - python suite.py
   tags:
     - demo
