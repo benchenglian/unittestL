@@ -2,11 +2,12 @@ image: continuumio/anaconda:2018.12
 
 before_script:
   - python --version
-  - pip install requests faker voluptuous selenium nose configparser
+  - pip install requests faker voluptuous selenium nose configparser docker-compose
 
 test:
   script:
-    - cd testsuites
+    - pwd
+    - cd uitestL
     - python suite.py
   tags:
     - demo
