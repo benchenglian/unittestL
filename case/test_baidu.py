@@ -8,7 +8,7 @@ import unittest, time, re
 
 class Baidu(unittest.TestCase):
     def setUp(self):
-        self.driver = selenium.webdriver.remote.webdriver.WebDriver(command_executor="http://127.0.0.1:5001/wd/hub",desired_capabilities=DesiredCapabilities.CHROME)
+        self.driver = selenium.webdriver.remote.webdriver.WebDriver(command_executor="http://192.168.1.3:5001/wd/hub",desired_capabilities=DesiredCapabilities.CHROME)
         self.base_url = "http://www.baidu.com/"
         self.verificationErrors = []
         self.accept_next_alert = True
