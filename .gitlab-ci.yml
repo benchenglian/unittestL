@@ -2,10 +2,13 @@ image: continuumio/anaconda:2018.12
 
 before_script:
   - python --version
+  - pip install selectivesearch -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
   - pip install requests faker voluptuous selenium nose configparser docker-compose
 
 test:
   script:
+    - docker-compose kill
+    - docker-compose start
     - pwd
     - cd uitestL
     - python suite.py
