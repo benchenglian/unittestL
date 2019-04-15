@@ -1,7 +1,7 @@
-image: selenium/standalone-chrome:latest
+image: elens-standalone-chrome:2.0
 
 before_script:
-  - ping 127.0.0.1
+  - ifconfig
 
 test:
   script:
