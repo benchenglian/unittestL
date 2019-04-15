@@ -7,7 +7,7 @@ import unittest, time, re
 
 class Youdao(unittest.TestCase):
     def setUp(self):
-        self.driver = selenium.webdriver.remote.webdriver.WebDriver(command_executor="[hub的地址]",
+        self.driver = selenium.webdriver.remote.webdriver.WebDriver(command_executor="127.0.0.1:4444//wd/hub",
                                                                     desired_capabilities=DesiredCapabilities.CHROME)
         self.base_url = "http://fanyi.youdao.com/?keyfrom=dict2.top"
         self.verificationErrors = []

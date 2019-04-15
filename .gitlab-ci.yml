@@ -1,9 +1,7 @@
-image: continuumio/anaconda:2018.12
+image: selenium/standalone-chrome:latest
 
 before_script:
-  - python --version
-  - pip install selectivesearch -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
-  - pip install requests faker voluptuous selenium nose configparser tomorrow
+  - ping 127.0.0.1
 
 test:
   script:

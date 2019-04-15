@@ -15,7 +15,7 @@ curpath = os.path.dirname(os.path.realpath(__file__))
 casepath = os.path.join(curpath, "case")
 reportpath = os.path.join(curpath, "report")
 
-def add_case(case_path=casepath, rule="test_*.py"):
+def add_case(case_path=casepath, rule="test_baidu.py"):
     '''加载所有的测试用例'''
     discover = unittest.defaultTestLoader.discover(case_path,
                                                   pattern=rule,

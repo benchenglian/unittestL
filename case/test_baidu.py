@@ -8,7 +8,7 @@ import unittest, time, re
 
 class Baidu(unittest.TestCase):
     def setUp(self):
-        self.driver = selenium.webdriver.remote.webdriver.WebDriver(command_executor="[hub的地址]",desired_capabilities=DesiredCapabilities.CHROME)
+        self.driver = selenium.webdriver.remote.webdriver.WebDriver(command_executor="127.0.0.1:4444//wd/hub",desired_capabilities=DesiredCapabilities.CHROME)
         self.base_url = "http://www.baidu.com/"
         self.verificationErrors = []
         self.accept_next_alert = True
@@ -40,7 +40,8 @@ class Baidu(unittest.TestCase):
 
         # 保存设置的信息
         driver.find_element_by_xpath("//input[@value='保存设置']").click()
-
+        print(driver.current_url)
+        print(driver.title)
     #def tearDown(self):
         #self.driver.quit()
         #self.assertEqual([], self.verificationErrors)  # 断言错误列表是否为空
