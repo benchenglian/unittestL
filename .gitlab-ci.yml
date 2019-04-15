@@ -6,6 +6,6 @@ before_script:
 test:
   script:
     - pwd
-    - python suite.py
+    - python baidu.py
   tags:
     - demo
