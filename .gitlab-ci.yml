@@ -1,11 +1,8 @@
-image: elens-standalone-chrome:2.0
-
-before_script:
-  - ifconfig
+image: elens-anaconda:1.0
 
 test:
   script:
     - pwd
-    - python baidu.py
+    - python suite.py
   tags:
     - demo

@@ -123,9 +123,9 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">自动化测试报告,测试结果如下：</h1>
 <p class='attribute'><strong>测试人员 : </strong> 最棒QA</p>
-<p class='attribute'><strong>开始时间 : </strong> 2019-04-13 21:47:11</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:12.459194</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 2，通过 2，通过率= 100.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-04-17 11:36:28</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:16.388385</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 2，通过 1，错误 1，通过率= 50.00%</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -133,9 +133,9 @@ function html_escape(s) {
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 50.00% }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 2 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 1 }</a>
 <a class="btn btn-info" href='javascript:showCase(3)'>所有{ 2 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
@@ -156,12 +156,12 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='passClass warning'>
+<tr class='errorClass warning'>
     <td>test_baidu.Baidu</td>
     <td class="text-center">2</td>
-    <td class="text-center">2</td>
+    <td class="text-center">1</td>
     <td class="text-center">0</td>
-    <td class="text-center">0</td>
+    <td class="text-center">1</td>
     <td class="text-center"><a href="javascript:showClassDetail('c1',2)" class="detail" id='c1'>详细</a></td>
 </tr>
 
@@ -170,19 +170,33 @@ function html_escape(s) {
     <td colspan='5' align='center'><span class="label label-success success">通过</span></td>
 </tr>
 
-<tr id='pt1_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_baidu_set: 百度设置</div></td>
+<tr id='ft1_2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_baidu_set: 百度设置</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse">  -->
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse in">
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse in">
     <pre>
     
-pt1_2: &lt;selenium.webdriver.remote.webelement.WebElement (session="d476d93035fb140319c7cebb7d57f5cf", element="0.27829289915861644-1")&gt;
+ft1_2: &lt;selenium.webdriver.remote.webelement.WebElement (session="b687b1c2d66a1f87ed3dbb1b2483a83a", element="0.8706906933293173-1")&gt;
+Traceback (most recent call last):
+  File "/Users/lianfeng/PycharmProjects/unittestL/case/test_baidu.py", line 43, in test_baidu_set
+    print(driver.current_url)
+  File "/anaconda2/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 669, in current_url
+    return self.execute(Command.GET_CURRENT_URL)['value']
+  File "/anaconda2/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/anaconda2/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 241, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)
+UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open
+  (Session info: chrome=62.0.3202.94)
+  (Driver info: chromedriver=2.33.506092 (733a02544d189eeb751fe0d7ddca79a0ee28cce4),platform=Linux 4.9.93-linuxkit-aufs x86_64)
+
 
 
     </pre>
@@ -193,10 +207,10 @@ pt1_2: &lt;selenium.webdriver.remote.webelement.WebElement (session="d476d93035f
 <tr id='total_row' class="text-center active">
     <td>总计</td>
     <td>2</td>
-    <td>2</td>
+    <td>1</td>
     <td>0</td>
-    <td>0</td>
-    <td>通过率：100.00%</td>
+    <td>1</td>
+    <td>通过率：50.00%</td>
 </tr>
 </table>
 

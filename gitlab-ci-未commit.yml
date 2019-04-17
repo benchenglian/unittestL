@@ -1,0 +1,13 @@
+image: continuumio/anaconda:2018.12
+
+before_script:
+  - python --version
+  - pip install selectivesearch -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+  - pip install requests faker voluptuous selenium nose configparser tomorrow
+
+test:
+  script:
+    - pwd
+    - python suite.py
+  tags:
+    - demo
