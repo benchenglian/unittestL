@@ -1,0 +1,8 @@
+image: elens-anaconda:1.0
+
+test:
+  script:
+    - pwd
+    - python suite.py
+  tags:
+    - demo

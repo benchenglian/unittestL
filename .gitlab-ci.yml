@@ -1,8 +1,26 @@
+# docker镜像
 image: elens-anaconda:1.0
 
-test:
+before_script:
+  - echo "脚本启动前执行"
+
+after_script:
+  - echo "脚本启动后执行"
+
+# 该ci pipeline适合的场景
+stages:
+  - test
+
+
+# 定义任务
+job1:
+  # 场景为测试
+  stage:
+    - test
+  # 所需执行的脚本
   script:
     - pwd
     - python suite.py
+  # 制定在哪个runner跑该工作
   tags:
     - demo
